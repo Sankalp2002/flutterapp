@@ -19,50 +19,53 @@ class MyApp extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 child: ListView(
                   children: <Widget>[
-                    Container(
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(20),
-                        child: Text(
-                          'Login',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 30),
-                        )),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('images/icon.png'),
-
+                     FractionallySizedBox(
+                       widthFactor: 0.4,
+                       child: Container(
+                         margin: EdgeInsets.symmetric(vertical: 30),
+                        child: Image.asset('images/icon.png',
+                            fit: BoxFit.scaleDown),
                     ),
-                    Card(
-                      margin:EdgeInsets.fromLTRB(5, 20, 5, 0),
-                      child: TextField(
+                     ),
+                    FractionallySizedBox(
+                      widthFactor: 0.9,
+                      child: Card(
+                        margin:EdgeInsets.fromLTRB(5, 20, 5, 0),
+                        child: TextField(
 
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'User Name',
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'User Name',
+                          ),
                         ),
                       ),
                     ),
-                    Card(
+                    FractionallySizedBox(
+                      widthFactor: 0.9,
+                      child: Card(
 
-                      child: TextField(
-                        obscureText: true,
+                        child: TextField(
+                          obscureText: true,
 
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Password',
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Password',
+                          ),
                         ),
                       ),
                     ),
-                    FlatButton(
-                      onPressed: () {
-                        //forgot password screen
-                      },
-                      textColor: Colors.black,
-                      child: Text('Forgot Password'),
+                    FractionallySizedBox(
+                      widthFactor: 0.4,
+                      child: FlatButton(
+                        onPressed: () {
+                          //forgot password screen
+                        },
+                        textColor: Colors.black,
+                        child: Text('Forgot Password'),
+                      ),
                     ),
-                    Container(
+                    FractionallySizedBox(
+                      widthFactor: 0.9,
 
                         child: RaisedButton(
                           textColor: Colors.white,
@@ -72,7 +75,8 @@ class MyApp extends StatelessWidget {
 
                           },
                         )),
-                    Container(
+                    FractionallySizedBox(
+                      widthFactor: 0.6,
                         child: Row(
                       children: <Widget>[
                         Text('Do not have account?'),
